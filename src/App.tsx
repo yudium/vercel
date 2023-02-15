@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
 function App() {
+  const ref = useRef<HTMLInputElement>(null);
+
   function handleDateMasking(e: React.KeyboardEvent<HTMLInputElement>): void {
     const select_all = e.key === 'a' && e.metaKey;
     const only_number = '1234567890'.split('').includes(e.key);
@@ -40,17 +42,21 @@ function App() {
         return;
     }
 
+    if (!ref.current) {
+      return;
+    }
+
     if (len === 2) {
-        element.value += '/';
+      ref.current.value += '/';
     }
     if (len === 5) {
-        element.value += '/';
+      ref.current.value += '/';
     }
 }
 
   return (
     <div>
-      <input type="text" onKeyDown={handleDateMasking} />
+      <input type="text" onKeyDown={handleDateMasking} ref={ref} />
     </div>
   )
 }
