@@ -17,6 +17,8 @@ function App() {
         '/',
     ].includes(e.key);
 
+    alert(e.key);
+
     if (!valid_keys && !select_all && !only_number) {
         e.preventDefault();
 
