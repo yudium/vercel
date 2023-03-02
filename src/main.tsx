@@ -5,12 +5,12 @@ import './index.css'
 
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import HttpApi from 'i18next-http-backend';
+import Backend from 'i18next-locize-backend';
 import { locizePlugin } from 'locize';
 
 i18n.use(initReactI18next) // passes i18n down to react-i18next
   .use(locizePlugin)
-  .use(HttpApi)
+  .use(Backend)
   .init({
     // the translations
     // (tip move them in a JSON file and import them,

@@ -14,6 +14,7 @@
     "@types/react-dates": "^21.8.3",
     "i18next": "^22.4.10",
     "i18next-http-backend": "^2.1.1",
+    "i18next-locize-backend": "^6.2.1",
     "locize": "^2.4.5",
     "moment": "^2.29.4",
     "react": "^18.2.0",
