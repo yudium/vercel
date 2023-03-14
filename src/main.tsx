@@ -27,7 +27,13 @@ i18n.use(initReactI18next) // passes i18n down to react-i18next
 
     backend: {
       projectId: '7da49584-db41-4cc7-b372-90688243eb29',
+      apiKey: '7b85d7b4-49db-4575-98df-bf06ade3a639',
     },
+
+    react: {
+      bindI18n: 'languageChanged editorSaved',
+    },
+    saveMissing: true,
 
     interpolation: {
       escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
